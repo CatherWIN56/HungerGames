@@ -1,0 +1,264 @@
+/*font imported from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/*overall style*/
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    z-index: 1;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/*book sizing*/
+.container {
+    width: 400px;
+    height: 600px;
+    background-color: black;
+    z-index: 2;
+    overflow: clip;
+}
+
+/*Styling for "THE"*/
+.small{
+    color: white;
+    font-family: Orbitron, sans-serif;
+    display: flex;
+    font-size: 35px;
+    font-weight: 1000;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: darkred;
+    align-items: center;
+    height: 10%;
+    margin-left: 50px;
+    margin-bottom: -15px;
+}
+
+/*Styling for "Hunger Games"*/
+.title{
+    color: white;
+    font-family: Orbitron, sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: darkred;
+    letter-spacing: 20px;
+    display: flex;
+    font-size: 50px;
+    font-weight: 1000;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    pointer-events: all;
+    animation:title 3s ease-out;
+}
+
+
+@keyframes title {
+    0%   {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+/*On hover command*/
+.title:hover{
+    color: darkred;
+}
+
+/*Styling for the circle at the top of the page*/
+.bullseye {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: #363434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    float: right;
+    margin-top: -230px;
+    margin-right: -50px;
+    z-index: -1;
+}
+
+.ring {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.ring:nth-child(odd) {
+    background-color: #363434;
+}
+
+.ring:nth-child(even) {
+    background-color: black;
+}
+
+.ring:nth-child(1) {
+    width: 210px;
+    height: 210px;
+}
+
+.ring:nth-child(2) {
+    width: 190px;
+    height: 190px;
+}
+
+.ring:nth-child(3) {
+    width: 170px;
+    height: 170px;
+}
+
+.ring:nth-child(4) {
+    width: 150px;
+    height: 150px;
+}
+
+.ring:nth-child(5) {
+    width: 122px;
+    height: 122px;
+}
+
+/*styling for the line coming from the circle*/
+.slanted-line {
+    width: 170px;
+    height: 12px;
+    background-color: #363434;
+    position: relative;
+    transform: rotate(130deg);
+    z-index: -1;
+    float: right;
+    margin-top: 14px;
+    margin-right: 80px;
+}
+
+/*Mocking Jay picture*/
+img{
+    scale: 65%;
+    float: left;
+    margin-top: -40px;
+    margin-left: -30px;
+    animation: wiggle 2.5s infinite;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    80% { transform: rotate(0deg); }
+    85% { transform: rotate(5deg); }
+    95% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+.slanted-line2 {
+    width: 120px;
+    height: 12px;
+    background-color: #363434;
+    position: relative;
+    transform: rotate(80deg);
+    z-index: -1;
+    float: left;
+    margin-top: 280px;
+    margin-left: -180px;
+}
+
+.bullseye2 {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: #363434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    float: left;
+    margin-top: 320px;
+    margin-left: -170px;
+    z-index: -1;
+}
+
+.ring2 {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.ring2:nth-child(odd) {
+    background-color: #363434;
+}
+
+.ring2:nth-child(even) {
+    background-color: black;
+}
+
+.ring2:nth-child(1) {
+    width: 170px;
+    height: 170px;
+}
+
+.ring2:nth-child(2) {
+    width: 150px;
+    height: 150px;
+}
+
+.ring2:nth-child(3) {
+    width: 130px;
+    height: 130px;
+}
+
+.ring2:nth-child(4) {
+    width: 110px;
+    height: 110px;
+}
+
+.ring2:nth-child(5) {
+    width: 82px;
+    height: 82px;
+}
+.nyt{
+    color:darkred;
+    font-size: 12px;
+    margin-top: -60px;
+    margin-left: 200px;
+    height: 20px;
+    width: 200px;
+    display: flex;
+    float: right;
+
+}
+.bestselling{
+    color:darkred;
+    font-size: 12px;
+    margin-top: -60px;
+    margin-left: 280px;
+    height: 20px;
+    width: 200px;
+    display: flex;
+    float: left;
+    z-index: 5;
+}
+
+.author{
+    color: white;
+    font-family: Orbitron, sans-serif;
+    letter-spacing: 3px;
+    font-size: 30px;
+    font-weight: 1000;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    float: right;
+    margin-top: -50px;
+    margin-right: 20px;
+}
+
+.author:hover{
+    color: darkred;
+}
+
+
+
